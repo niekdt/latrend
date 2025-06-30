@@ -33,7 +33,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">latrend</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.6.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.6.2</span>
       </span>
     </div>
 
@@ -63,7 +63,7 @@
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/philips-software/latrend/" class="external-link">
+  <a href="https://github.com/niekdt/latrend/" class="external-link">
     <span class="fab fa-github fa-lg"></span>
 
   </a>
@@ -101,7 +101,7 @@
 <li>The structured and unified analysis approach enables <strong>simulation studies</strong> for comparing methods.</li>
 <li>Standardized <strong>model validation</strong> for all methods through bootstrapping or k-fold cross-validation.</li>
 </ul>
-<p>See the <a href="https://github.com/philips-software/latrend/blob/master/cran-comments.md" class="external-link">release notes page</a> for the latest updates.</p>
+<p>See the <a href="https://github.com/niekdt/latrend/blob/master/cran-comments.md" class="external-link">release notes page</a> for the latest updates.</p>
 </div>
 <div class="section level1">
 <h1 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
@@ -111,15 +111,15 @@
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"latrend"</span><span class="op">)</span></span></code></pre></div>
 <p>It can also be installed from Github directly using:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">'philips-software/latrend'</span>, ref <span class="op">=</span> <span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/github_refs.html" class="external-link">github_release</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">'niekdt/latrend'</span>, ref <span class="op">=</span> <span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/github_refs.html" class="external-link">github_release</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="co"># include vignettes</span></span>
-<span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">'philips-software/latrend'</span>, ref <span class="op">=</span> <span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/github_refs.html" class="external-link">github_release</a></span><span class="op">(</span><span class="op">)</span>, build_vignettes <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">'niekdt/latrend'</span>, ref <span class="op">=</span> <span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/github_refs.html" class="external-link">github_release</a></span><span class="op">(</span><span class="op">)</span>, build_vignettes <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level1">
 <h1 id="usage">Usage<a class="anchor" aria-label="anchor" href="#usage"></a>
 </h1>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/philips-software/latrend" class="external-link">latrend</a></span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/niekdt/latrend" class="external-link">latrend</a></span><span class="op">)</span></span></code></pre></div>
 <p>Load and view example data.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">latrendData</span><span class="op">)</span></span>
@@ -158,7 +158,7 @@
 <div class="section level1">
 <h1 id="contributing">Contributing<a class="anchor" aria-label="anchor" href="#contributing"></a>
 </h1>
-<p>We appreciate any contributions in the form of ideas, feature requests, bug reports, bug fixes, documentation improvements, code reformatting, and code submissions. Please see the <a href="https://philips-software.github.io/latrend/CONTRIBUTING.html" class="external-link">Contributing guide</a>.</p>
+<p>We appreciate any contributions in the form of ideas, feature requests, bug reports, bug fixes, documentation improvements, code reformatting, and code submissions. Please see the <a href="https://niekdt.github.io/latrend/CONTRIBUTING.html" class="external-link">Contributing guide</a>.</p>
 </div>
 
   </div>
@@ -168,8 +168,8 @@
 <h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">
 <li><a href="https://cloud.r-project.org/package=latrend" class="external-link">View on CRAN</a></li>
-<li><a href="https://github.com/philips-software/latrend/" class="external-link">Browse source code</a></li>
-<li><a href="https://github.com/philips-software/latrend/issues" class="external-link">Report a bug</a></li>
+<li><a href="https://github.com/niekdt/latrend/" class="external-link">Browse source code</a></li>
+<li><a href="https://github.com/niekdt/latrend/issues" class="external-link">Report a bug</a></li>
 </ul>
 </div>
 
@@ -206,10 +206,10 @@
 <div class="dev-status">
 <h2 data-toc-skip>Dev status</h2>
 <ul class="list-unstyled">
-<li><a href="https://github.com/philips-software/latrend/actions/workflows/R-CMD-check.yaml" class="external-link"><img src="https://github.com/philips-software/latrend/actions/workflows/R-CMD-check.yaml/badge.svg" alt="R-CMD-check"></a></li>
+<li><a href="https://github.com/niekdt/latrend/actions/workflows/R-CMD-check.yaml" class="external-link"><img src="https://github.com/niekdt/latrend/actions/workflows/R-CMD-check.yaml/badge.svg" alt="R-CMD-check"></a></li>
 <li><a href="https://cran.r-project.org/package=latrend" class="external-link"><img src="https://www.r-pkg.org/badges/version/latrend" alt="CRAN"></a></li>
 <li><a href="https://lifecycle.r-lib.org/articles/stages.html#maturing" class="external-link"><img src="https://img.shields.io/badge/lifecycle-maturing-blue.svg" alt="Lifecycle: maturing"></a></li>
-<li><a href="https://codecov.io/gh/philips-software/latrend?branch=master" class="external-link"><img src="https://codecov.io/gh/philips-software/latrend/branch/master/graph/badge.svg" alt="Codecov test coverage"></a></li>
+<li><a href="https://codecov.io/gh/niekdt/latrend?branch=master" class="external-link"><img src="https://codecov.io/gh/niekdt/latrend/branch/master/graph/badge.svg" alt="Codecov test coverage"></a></li>
 <li><a href="https://www.r-pkg.org/pkg/latrend" class="external-link"><img src="https://cranlogs.r-pkg.org/badges/grand-total/latrend" alt="Downloads"></a></li>
 </ul>
 </div>
@@ -225,7 +225,7 @@
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.2.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.3.</p>
 </div>
 
       </footer>
