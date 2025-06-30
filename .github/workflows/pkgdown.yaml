@@ -6,6 +6,7 @@ on:
     tags: ['*']
 
 name: pkgdown
+permissions: read-all
 
 jobs:
   pkgdown:

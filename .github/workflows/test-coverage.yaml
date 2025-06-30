@@ -13,6 +13,7 @@ on:
     branches: [main, master]
 
 name: test-coverage
+permissions: read-all
 
 jobs:
   test-coverage:

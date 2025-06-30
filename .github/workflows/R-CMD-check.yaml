@@ -17,6 +17,7 @@ on:
     branches: [main, master]
 
 name: R-CMD-check
+permissions: read-all
 
 jobs:
   R-CMD-check:
