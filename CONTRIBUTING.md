@@ -3,7 +3,7 @@ Thank you for your interest in contributing to this project. We value any input 
 Please read the guidelines below for instructions and criteria on filing issues, making code changes, and submitting PRs.
 
 # Filing issues
-* Issues are intended for ideas, suggestions, feature requests, and bug reports. Don't submit an issue for a coding question or support. Use the [Discussions](https://github.com/philips-software/latrend/discussions) area instead.
+* Issues are intended for ideas, suggestions, feature requests, and bug reports. Don't submit an issue for a coding question or support. Use the [Discussions](https://github.com/niekdt/latrend/discussions) area instead.
 * Please check the existing issues to see whether your suggestion/feature request/bug has already been discussed.
 * An issue should address only a single concept/idea/bug.
 

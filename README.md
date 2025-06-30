@@ -1,9 +1,9 @@
 # latrend
 <!-- badges: start -->
-  [![R-CMD-check](https://github.com/philips-software/latrend/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/philips-software/latrend/actions/workflows/R-CMD-check.yaml)
+  [![R-CMD-check](https://github.com/niekdt/latrend/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/niekdt/latrend/actions/workflows/R-CMD-check.yaml)
   [![CRAN](https://www.r-pkg.org/badges/version/latrend)](https://cran.r-project.org/package=latrend)
   [![Lifecycle: maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://lifecycle.r-lib.org/articles/stages.html#maturing)
-  [![Codecov test coverage](https://codecov.io/gh/philips-software/latrend/branch/master/graph/badge.svg)](https://codecov.io/gh/philips-software/latrend?branch=master)
+  [![Codecov test coverage](https://codecov.io/gh/niekdt/latrend/branch/master/graph/badge.svg)](https://codecov.io/gh/niekdt/latrend?branch=master)
   [![Downloads](https://cranlogs.r-pkg.org/badges/grand-total/latrend)](https://www.r-pkg.org/pkg/latrend)
 <!-- badges: end -->
 The `latrend` package provides a framework for clustering longitudinal datasets in a standardized way. The name is short for _latent-class trend (analysis)_, referring to the discovery of hidden trends in the data. The package provides interfaces to various R packages for conducting this type of analysis.
@@ -19,7 +19,7 @@ The package is described in detail in the pre-print available at https://arxiv.o
 * The structured and unified analysis approach enables **simulation studies** for comparing methods.
 * Standardized **model validation** for all methods through bootstrapping or k-fold cross-validation.
 
-See the [release notes page](https://github.com/philips-software/latrend/blob/master/cran-comments.md) for the latest updates.
+See the [release notes page](https://github.com/niekdt/latrend/blob/master/cran-comments.md) for the latest updates.
 
 # Installation
 The latest release of _latrend_ can be installed from CRAN by running:
@@ -29,9 +29,9 @@ install.packages("latrend")
 
 It can also be installed from Github directly using:
 ```R
-remotes::install_github('philips-software/latrend', ref = remotes::github_release())
+remotes::install_github('niekdt/latrend', ref = remotes::github_release())
 # include vignettes
-remotes::install_github('philips-software/latrend', ref = remotes::github_release(), build_vignettes = TRUE)
+remotes::install_github('niekdt/latrend', ref = remotes::github_release(), build_vignettes = TRUE)
 ```
 
 # Usage
@@ -86,4 +86,4 @@ The `latrend` package provides interfaces to the relevant methods for longitudin
 * [mixtools](https://CRAN.R-project.org/package=mixtools)
 
 # Contributing
-We appreciate any contributions in the form of ideas, feature requests, bug reports, bug fixes, documentation improvements, code reformatting, and code submissions. Please see the [Contributing guide](https://philips-software.github.io/latrend/CONTRIBUTING.html).
+We appreciate any contributions in the form of ideas, feature requests, bug reports, bug fixes, documentation improvements, code reformatting, and code submissions. Please see the [Contributing guide](https://niekdt.github.io/latrend/CONTRIBUTING.html).

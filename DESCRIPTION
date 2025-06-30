@@ -1,7 +1,7 @@
 Package: latrend
 Type: Package
-Version: 1.6.1
-Date: 2024-05-15
+Version: 1.6.2
+Date: 2025-06-30
 Title: A Framework for Clustering Longitudinal Data
 Description: A framework for clustering longitudinal datasets in a standardized way. 
     The package provides an interface to existing R packages for clustering longitudinal univariate trajectories, facilitating reproducible and transparent analyses. 
@@ -24,8 +24,8 @@ Authors@R:
              role = "ctb",
              email = "e.r.v.d.heuvel@tue.nl"),
       person(given = "Koninklijke Philips N.V.", role = "cph"))
-URL: https://github.com/philips-software/latrend, https://philips-software.github.io/latrend/
-BugReports: https://github.com/philips-software/latrend/issues
+URL: https://github.com/niekdt/latrend, https://niekdt.github.io/latrend/
+BugReports: https://github.com/niekdt/latrend/issues
 License: GPL (>= 2)
 Encoding: UTF-8
 LazyData: true
