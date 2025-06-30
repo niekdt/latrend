@@ -104,9 +104,9 @@ Model functions:
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/philips-software/latrend}
-  \item \url{https://philips-software.github.io/latrend/}
-  \item Report bugs at \url{https://github.com/philips-software/latrend/issues}
+  \item \url{https://github.com/niekdt/latrend}
+  \item \url{https://niekdt.github.io/latrend/}
+  \item Report bugs at \url{https://github.com/niekdt/latrend/issues}
 }
 
 }

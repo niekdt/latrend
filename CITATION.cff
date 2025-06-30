@@ -11,6 +11,6 @@ authors:
   given-names: "Edwin"
   orcid: "https://orcid.org/0000-0001-9157-7224"
 title: "latrend: A Framework for Clustering Longitudinal Data"
-version: 1.2.0
-date-released: 2021-07-26
-url: "https://github.com/philips-software/latrend"
+version: 1.6.2
+date-released: 2025-06-30
+url: "https://github.com/niekdt/latrend"
