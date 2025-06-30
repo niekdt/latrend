@@ -2,8 +2,8 @@
 <!-- badges: start -->
   [![R-CMD-check](https://github.com/niekdt/latrend/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/niekdt/latrend/actions/workflows/R-CMD-check.yaml)
   [![CRAN](https://www.r-pkg.org/badges/version/latrend)](https://cran.r-project.org/package=latrend)
-  [![Lifecycle: maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://lifecycle.r-lib.org/articles/stages.html#maturing)
-  [![Codecov test coverage](https://codecov.io/gh/niekdt/latrend/branch/master/graph/badge.svg)](https://codecov.io/gh/niekdt/latrend?branch=master)
+  [![Lifecycle: maturing](https://img.shields.io/badge/Lifecycle-Stable-green.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
+<!--  [![Codecov test coverage](https://codecov.io/gh/niekdt/latrend/branch/master/graph/badge.svg)](https://codecov.io/gh/niekdt/latrend?branch=master) -->
   [![Downloads](https://cranlogs.r-pkg.org/badges/grand-total/latrend)](https://www.r-pkg.org/pkg/latrend)
 <!-- badges: end -->
 The `latrend` package provides a framework for clustering longitudinal datasets in a standardized way. The name is short for _latent-class trend (analysis)_, referring to the discovery of hidden trends in the data. The package provides interfaces to various R packages for conducting this type of analysis.
