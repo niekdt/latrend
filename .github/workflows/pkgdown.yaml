@@ -6,6 +6,9 @@ on:
     tags: ['*']
 
 name: pkgdown
+permissions:
+  contents: write
+  pages: write
 
 jobs:
   pkgdown:
