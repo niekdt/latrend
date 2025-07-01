@@ -19,7 +19,7 @@ Any inputs supported by \code{\link[=trajectories]{trajectories()}} can be used,
 If the \code{data} argument is of type \code{call} then this environment is also used to evaluate the \code{data} argument.}
     \item{\code{verbose}}{The level of verbosity. Either an object of class \code{Verbose} (see \link[R.utils:Verbose]{R.utils::Verbose} for details),
 a \code{logical} indicating whether to show basic computation information,
-a \code{numeric} indicating the verbosity level (see \link{Verbose}),
+a \code{numeric} indicating the verbosity level (see \link[R.utils:Verbose]{R.utils::Verbose}),
 or one of \code{c('info', 'fine', 'finest')}.}
   }}
 }

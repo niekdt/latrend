@@ -30,7 +30,7 @@ NULL
 #' If the `data` argument is of type `call` then this environment is also used to evaluate the `data` argument.
 #' @param verbose The level of verbosity. Either an object of class `Verbose` (see [R.utils::Verbose] for details),
 #' a `logical` indicating whether to show basic computation information,
-#' a `numeric` indicating the verbosity level (see [Verbose]),
+#' a `numeric` indicating the verbosity level (see [R.utils::Verbose]),
 #' or one of `c('info', 'fine', 'finest')`.
 #' @details If a seed value is specified in the `lcMethod` object or arguments to `latrend`, this seed is set using `set.seed` prior to the [preFit] step.
 #' @return A [lcModel] object representing the fitted solution.
