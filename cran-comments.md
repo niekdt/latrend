@@ -1,7 +1,8 @@
-# 2025-06-30 latrend [v1.6.2](https://github.com/niekdt/latrend/milestone/12)
+# 2025-07-04 latrend [v1.6.2](https://github.com/niekdt/latrend/milestone/12)
 
 - Migrated the git repository, changed all URLs to the new location.
 - Fixed querying of model variables (#162)
+- Reduced dtwclust example runtime
 
 # 2024-05-14 latrend [v1.6.1](https://github.com/niekdt/latrend/milestone/11)
 

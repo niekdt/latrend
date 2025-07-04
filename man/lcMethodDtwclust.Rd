@@ -32,7 +32,8 @@ data(latrendData)
 
 if (require("dtwclust")) {
   method <- lcMethodDtwclust("Y", id = "Id", time = "Time", nClusters = 3)
-  model <- latrend(method, latrendData)
+  # reduced sample size to lower runtime
+  model <- latrend(method, latrendData[1:500, ])
 }
 }
 \references{
