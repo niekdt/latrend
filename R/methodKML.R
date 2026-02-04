@@ -3,7 +3,7 @@
 #' @name interface-kml
 #' @rdname interface-kml
 #' @title kml interface
-#' @seealso [lcMethodKML] \link[kml]{kml}
+#' @seealso [lcMethodKML]
 #' @keywords internal
 NULL
 
@@ -15,7 +15,7 @@ setClass('lcMethodKML', contains = 'lcMatrixMethod')
 #' @param time The name of the time variable.
 #' @param id The name of the trajectory identifier variable.
 #' @param nClusters The number of clusters to estimate.
-#' @param ... Arguments passed to [kml::parALGO] and [kml::kml].
+#' @param ... Arguments passed to `kml::parALGO` and `kml::kml`.
 #'
 #' The following external arguments are ignored: object, nbClusters, parAlgo, toPlot, saveFreq
 #' @examples
@@ -35,6 +35,7 @@ lcMethodKML = function(
   nClusters = 2,
   ...
 ) {
+  .loadOptionalPackage('kml')
   mc = match.call.all()
   mc$Class = 'lcMethodKML'
   do.call(new, as.list(mc))

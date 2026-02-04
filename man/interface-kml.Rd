@@ -63,6 +63,6 @@
 kml interface
 }
 \seealso{
-\link{lcMethodKML} \link[kml]{kml}
+\link{lcMethodKML}
 }
 \keyword{internal}
