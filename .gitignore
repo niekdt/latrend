@@ -31,3 +31,4 @@ tests/testthat/*.rds
 check
 nul
 private/
+cache
