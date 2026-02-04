@@ -87,7 +87,7 @@ options(latrend.id = "Traj", latrend.time = "Time")
 
 It's a good idea to inspect the data we are generating.
 ```{r}
-exampleData <- dataGen(numTraj = 200, randomScale = .1, data.seed = 1)
+exampleData <- dataGen(numTraj = 100, randomScale = .1, data.seed = 1)
 plotTrajectories(exampleData, response = "Y")
 ```
 
@@ -99,7 +99,7 @@ As we intend to evaluate the methods on each combination of data settings, we ne
 ```{r}
 dataGrid <- simTool::expand_tibble(
   fun = "dataGen",
-  numTraj = c(50, 250),
+  numTraj = c(50, 100),
   randomScales = c(.1, .5),
   data.seed = 1:2
 )
@@ -114,15 +114,15 @@ Similarly to the data settings table, we specify a table of all permutations for
 The method evaluation function (specified by the `proc` field) here is simply the `latrend()` function, which will fit the specified method type to the generated data.
 ## Specfying the KmL method
 ```{r}
-kmlMethodGrid <- simTool::expand_tibble(
+dtwMethodGrid <- simTool::expand_tibble(
   proc = "latrend",
-  method = "lcMethodKML",
-  nClusters = 1:2,
+  method = "lcMethodDtwclust",
+  nClusters = 2:3,
   seed = 1,
   response = "Y"
 )
 
-head(kmlMethodGrid)
+head(dtwMethodGrid)
 ```
 
 ## Specifying the GCKM method
@@ -146,14 +146,14 @@ gckmMethodGrid <- simTool::expand_tibble(
   proc = "fitGCKM",
   method = "lcMethodGCKM",
   type = c("constant", "linear"),
-  nClusters = 1:2,
+  nClusters = 2:3,
   seed = 1
 )
 ```
 
 Finally, we combine our method-specific permutation grids into one large grid. By using the `bind_rows()` function, mismatches in the columns between the grids are handled properly.
 ```{r}
-methodGrid <- dplyr::bind_rows(kmlMethodGrid, gckmMethodGrid)
+methodGrid <- dplyr::bind_rows(dtwMethodGrid, gckmMethodGrid)
 head(methodGrid)
 ```
 
