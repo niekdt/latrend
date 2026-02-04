@@ -49,8 +49,8 @@ plotTrajectories(latrendData, response = "Y")
 
 Cluster the trajectories and plot the results.
 ```R
-kmlMethod <- lcMethodKML("Y", nClusters = 3)
-model <- latrend(kmlMethod, data = latrendData)
+method <- lcMethodLMKM(formula = Y ~ poly(Time, 2), nClusters = 3)
+model <- latrend(method, data = latrendData)
 summary(model)
 plot(model)
 ```
@@ -59,8 +59,8 @@ plot(model)
 
 Identify solutions for 1 to 5 clusters.
 ```R
-kmlMethods <- lcMethods(kmlMethod, nClusters = 1:5)
-models <- latrendBatch(kmlMethods, data = latrendData)
+methods <- lcMethods(method, nClusters = 1:5)
+models <- latrendBatch(methods, data = latrendData)
 ```
 
 Determine the number of clusters through one or more internal cluser metrics.
