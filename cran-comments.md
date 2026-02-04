@@ -1,3 +1,7 @@
+# 2026-02-05 latrend [v1.6.3]
+
+- Resolve CRAN errors due to kml archival
+
 # 2025-07-04 latrend [v1.6.2](https://github.com/niekdt/latrend/milestone/12)
 
 - Migrated the git repository, changed all URLs to the new location.
