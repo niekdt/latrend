@@ -34,7 +34,7 @@ if (require("caret")) {
   trainFolds <- createTrainDataFolds(latrendData, folds = 5, id = "Id", seed = 1)
 
   foldModels <- latrendBatch(method, data = trainFolds)
-  testDataFolds <- createTestDataFolds(latrendData, trainFolds)
+  testDataFolds <- createTestDataFolds(latrendData, trainFolds, id = "Id")
 }
 }
 \seealso{

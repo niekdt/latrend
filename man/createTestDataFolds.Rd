@@ -21,7 +21,7 @@ data(latrendData)
 
 if (require("caret")) {
   trainDataList <- createTrainDataFolds(latrendData, folds = 10, id = "Id")
-  testDataList <- createTestDataFolds(latrendData, trainDataList)
+  testDataList <- createTestDataFolds(latrendData, trainDataList, id = "Id")
 }
 }
 \seealso{

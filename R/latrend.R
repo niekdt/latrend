@@ -762,7 +762,7 @@ latrendCV = function(
 #'   trainFolds <- createTrainDataFolds(latrendData, folds = 5, id = "Id", seed = 1)
 #'
 #'   foldModels <- latrendBatch(method, data = trainFolds)
-#'   testDataFolds <- createTestDataFolds(latrendData, trainFolds)
+#'   testDataFolds <- createTestDataFolds(latrendData, trainFolds, id = "Id")
 #' }
 createTrainDataFolds = function(
   data,
@@ -832,7 +832,7 @@ createTestDataFold = function(data, trainData, id = getOption('latrend.id')) {
 #'
 #' if (require("caret")) {
 #'   trainDataList <- createTrainDataFolds(latrendData, folds = 10, id = "Id")
-#'   testDataList <- createTestDataFolds(latrendData, trainDataList)
+#'   testDataList <- createTestDataFolds(latrendData, trainDataList, id = "Id")
 #' }
 createTestDataFolds = function(data, trainDataList, ...) {
   lapply(
