@@ -57,8 +57,6 @@ Suggests:
     covr,
     lintr,
     tinytex,
-    longitudinalData (>= 2.4.1),
-    kml (>= 2.4.1),
     lcmm (>= 1.9.3),
     mixtools,
     flexmix,
