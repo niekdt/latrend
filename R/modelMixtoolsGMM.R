@@ -85,6 +85,8 @@ sigma.lcModelMixtoolsGMM = function(object, ...) {
 }
 
 
+#' @export
+#' @rdname interface-mixtools
 ranef.lcModelMixtoolsGMM = function(object, ...) {
   betaNames = colnames(object@model$x[[1]])
   nBeta = length(betaNames)

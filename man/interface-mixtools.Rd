@@ -21,6 +21,7 @@
 \alias{logLik.lcModelMixtoolsGMM}
 \alias{coef.lcModelMixtoolsGMM}
 \alias{sigma.lcModelMixtoolsGMM}
+\alias{ranef.lcModelMixtoolsGMM}
 \alias{clusterTrajectories,lcModelMixtoolsRM-method}
 \alias{postprob,lcModelMixtoolsRM-method}
 \alias{logLik.lcModelMixtoolsRM}
@@ -62,6 +63,8 @@
 \method{coef}{lcModelMixtoolsGMM}(object, ...)
 
 \method{sigma}{lcModelMixtoolsGMM}(object, ...)
+
+ranef.lcModelMixtoolsGMM(object, ...)
 
 \S4method{clusterTrajectories}{lcModelMixtoolsRM}(
   object,
