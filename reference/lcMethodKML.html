@@ -17,7 +17,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">latrend</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.6.2</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.6.3</span>
       </span>
     </div>
 
@@ -57,7 +57,7 @@
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Specify a longitudinal k-means (KML) method</h1>
-    <small class="dont-index">Source: <a href="https://github.com/niekdt/latrend/blob/v1.6.2/R/methodKML.R" class="external-link"><code>R/methodKML.R</code></a></small>
+    <small class="dont-index">Source: <a href="https://github.com/niekdt/latrend/blob/master/R/methodKML.R" class="external-link"><code>R/methodKML.R</code></a></small>
     <div class="hidden name"><code>lcMethodKML.Rd</code></div>
     </div>
 
@@ -96,7 +96,7 @@
 
 
 <dt id="arg--">...<a class="anchor" aria-label="anchor" href="#arg--"></a></dt>
-<dd><p>Arguments passed to <a href="https://rdrr.io/pkg/kml/man/parKml.html" class="external-link">kml::parALGO</a> and <a href="https://rdrr.io/pkg/kml/man/kml.html" class="external-link">kml::kml</a>.</p>
+<dd><p>Arguments passed to <code>kml::parALGO</code> and <code>kml::kml</code>.</p>
 <p>The following external arguments are ignored: object, nbClusters, parAlgo, toPlot, saveFreq</p></dd>
 
 </dl></div>
@@ -111,8 +111,8 @@
     <div id="see-also">
     <h2>See also</h2>
     <div class="dont-index"><p>Other lcMethod implementations:
-<code><a href="getArgumentDefaults.html">getArgumentDefaults</a>()</code>,
-<code><a href="getArgumentExclusions.html">getArgumentExclusions</a>()</code>,
+<code><a href="getArgumentDefaults.html">getArgumentDefaults()</a></code>,
+<code><a href="getArgumentExclusions.html">getArgumentExclusions()</a></code>,
 <code><a href="lcMethod-class.html">lcMethod-class</a></code>,
 <code><a href="lcMethodAkmedoids.html">lcMethodAkmedoids</a></code>,
 <code><a href="lcMethodCrimCV.html">lcMethodCrimCV</a></code>,
@@ -140,8 +140,8 @@
 <span class="r-in"><span>  <span class="va">method</span> <span class="op">&lt;-</span> <span class="fu">lcMethodKML</span><span class="op">(</span><span class="st">"Y"</span>, id <span class="op">=</span> <span class="st">"Id"</span>, time <span class="op">=</span> <span class="st">"Time"</span>, nClusters <span class="op">=</span> <span class="fl">3</span><span class="op">)</span></span></span>
 <span class="r-in"><span>  <span class="va">model</span> <span class="op">&lt;-</span> <span class="fu"><a href="latrend.html">latrend</a></span><span class="op">(</span><span class="va">method</span>, <span class="va">latrendData</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="op">}</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  ~ Fast KmL ~</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> ********************S</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Loading required package: kml</span>
+<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>there is no package called ‘kml’</span>
 </code></pre></div>
     </div>
   </div>
@@ -156,7 +156,7 @@
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.3.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.0.</p>
 </div>
 
       </footer></div>

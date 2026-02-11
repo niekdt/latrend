@@ -18,7 +18,7 @@ getShortName(): Extracts the short object name"><!-- mathjax --><script src="htt
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">latrend</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.6.2</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.6.3</span>
       </span>
     </div>
 
@@ -58,7 +58,7 @@ getShortName(): Extracts the short object name"><!-- mathjax --><script src="htt
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Object name</h1>
-    <small class="dont-index">Source: <a href="https://github.com/niekdt/latrend/blob/v1.6.2/R/generics.R" class="external-link"><code>R/generics.R</code></a>, <a href="https://github.com/niekdt/latrend/blob/v1.6.2/R/method.R" class="external-link"><code>R/method.R</code></a>, <a href="https://github.com/niekdt/latrend/blob/v1.6.2/R/model.R" class="external-link"><code>R/model.R</code></a></small>
+    <small class="dont-index">Source: <a href="https://github.com/niekdt/latrend/blob/master/R/generics.R" class="external-link"><code>R/generics.R</code></a>, <a href="https://github.com/niekdt/latrend/blob/master/R/method.R" class="external-link"><code>R/method.R</code></a>, <a href="https://github.com/niekdt/latrend/blob/master/R/model.R" class="external-link"><code>R/model.R</code></a></small>
     <div class="hidden name"><code>getName.Rd</code></div>
     </div>
 
@@ -116,9 +116,9 @@ getShortName(): Extracts the short object name"><!-- mathjax --><script src="htt
 
 
 <p>When implementing your own <code>lcMethod</code> subclass, override these methods to provide full and abbreviated names.</p><div class="sourceCode"><pre><code><span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/methods/setMethod.html" class="external-link">setMethod</a></span><span class="op">(</span><span class="st">"getName"</span>, <span class="st">"lcMethodExample"</span>, <span class="kw">function</span><span class="op">(</span><span class="va">object</span><span class="op">)</span> <span class="st">"example name"</span><span class="op">)</span></span>
+<span><span class="kw">setMethod</span><span class="op">(</span><span class="st">"getName"</span>, <span class="st">"lcMethodExample"</span>, <span class="kw">function</span><span class="op">(</span><span class="va">object</span><span class="op">)</span> <span class="st">"example name"</span><span class="op">)</span></span>
 <span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/methods/setMethod.html" class="external-link">setMethod</a></span><span class="op">(</span><span class="st">"getShortName"</span>, <span class="st">"lcMethodExample"</span>, <span class="kw">function</span><span class="op">(</span><span class="va">object</span><span class="op">)</span> <span class="st">"EX"</span><span class="op">)</span></span></code></pre></div>
+<span><span class="kw">setMethod</span><span class="op">(</span><span class="st">"getShortName"</span>, <span class="st">"lcMethodExample"</span>, <span class="kw">function</span><span class="op">(</span><span class="va">object</span><span class="op">)</span> <span class="st">"EX"</span><span class="op">)</span></span></code></pre></div>
 
 <p>Similar methods can be implemented for your <code>lcModel</code> subclass,
 however in practice this is not needed as the names are determined by default from the <code>lcMethod</code> object that was used to fit the <code>lcModel</code> object.</p>
@@ -150,7 +150,7 @@ however in practice this is not needed as the names are determined by default fr
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.3.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.0.</p>
 </div>
 
       </footer></div>

@@ -32,7 +32,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">latrend</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.6.2</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.6.3</span>
       </span>
     </div>
 
@@ -85,7 +85,7 @@
 Teuling</h4>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/niekdt/latrend/blob/v1.6.2/vignettes/simulation.Rmd" class="external-link"><code>vignettes/simulation.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/niekdt/latrend/blob/master/vignettes/simulation.Rmd" class="external-link"><code>vignettes/simulation.Rmd</code></a></small>
       <div class="hidden name"><code>simulation.Rmd</code></div>
 
     </div>
@@ -181,9 +181,9 @@ specify this in any future calls.</p>
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">options</a></span><span class="op">(</span>latrend.id <span class="op">=</span> <span class="st">"Traj"</span>, latrend.time <span class="op">=</span> <span class="st">"Time"</span><span class="op">)</span></span></code></pre></div>
 <p>It’s a good idea to inspect the data we are generating.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">exampleData</span> <span class="op">&lt;-</span> <span class="fu">dataGen</span><span class="op">(</span>numTraj <span class="op">=</span> <span class="fl">200</span>, randomScale <span class="op">=</span> <span class="fl">.1</span>, data.seed <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="va">exampleData</span> <span class="op">&lt;-</span> <span class="fu">dataGen</span><span class="op">(</span>numTraj <span class="op">=</span> <span class="fl">100</span>, randomScale <span class="op">=</span> <span class="fl">.1</span>, data.seed <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span>
 <span><span class="fu"><a href="../reference/plotTrajectories.html">plotTrajectories</a></span><span class="op">(</span><span class="va">exampleData</span>, response <span class="op">=</span> <span class="st">"Y"</span><span class="op">)</span></span></code></pre></div>
-<p><img src="simulation_files/figure-html/unnamed-chunk-5-1.png" width="700"></p>
+<p><img src="simulation_files/figure-html/unnamed-chunk-5-1.png" class="r-plt" alt="" width="700"></p>
 </div>
 <div class="section level2">
 <h2 id="data-settings">Data settings<a class="anchor" aria-label="anchor" href="#data-settings"></a>
@@ -201,7 +201,7 @@ done using the <code><a href="https://rdrr.io/r/base/expand.grid.html" class="ex
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">dataGrid</span> <span class="op">&lt;-</span> <span class="fu">simTool</span><span class="fu">::</span><span class="fu"><a href="http://MarselScheer.github.io/simTool/reference/expand_tibble.html" class="external-link">expand_tibble</a></span><span class="op">(</span></span>
 <span>  fun <span class="op">=</span> <span class="st">"dataGen"</span>,</span>
-<span>  numTraj <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">50</span>, <span class="fl">250</span><span class="op">)</span>,</span>
+<span>  numTraj <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">50</span>, <span class="fl">100</span><span class="op">)</span>,</span>
 <span>  randomScales <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">.1</span>, <span class="fl">.5</span><span class="op">)</span>,</span>
 <span>  data.seed <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">2</span></span>
 <span><span class="op">)</span></span>
@@ -211,11 +211,11 @@ done using the <code><a href="https://rdrr.io/r/base/expand.grid.html" class="ex
 <span><span class="co">#&gt;   fun     numTraj randomScales data.seed</span></span>
 <span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;int&gt;</span></span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> dataGen      50          0.1         1</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span> dataGen     250          0.1         1</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span> dataGen     100          0.1         1</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">3</span> dataGen      50          0.5         1</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">4</span> dataGen     250          0.5         1</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">4</span> dataGen     100          0.5         1</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">5</span> dataGen      50          0.1         2</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">6</span> dataGen     250          0.1         2</span></span></code></pre></div>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">6</span> dataGen     100          0.1         2</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="method-settings">Method settings<a class="anchor" aria-label="anchor" href="#method-settings"></a>
@@ -232,20 +232,20 @@ field) here is simply the <code><a href="../reference/latrend.html">latrend()</a
 fit the specified method type to the generated data. ## Specfying the
 KmL method</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">kmlMethodGrid</span> <span class="op">&lt;-</span> <span class="fu">simTool</span><span class="fu">::</span><span class="fu"><a href="http://MarselScheer.github.io/simTool/reference/expand_tibble.html" class="external-link">expand_tibble</a></span><span class="op">(</span></span>
+<code class="sourceCode R"><span><span class="va">dtwMethodGrid</span> <span class="op">&lt;-</span> <span class="fu">simTool</span><span class="fu">::</span><span class="fu"><a href="http://MarselScheer.github.io/simTool/reference/expand_tibble.html" class="external-link">expand_tibble</a></span><span class="op">(</span></span>
 <span>  proc <span class="op">=</span> <span class="st">"latrend"</span>,</span>
-<span>  method <span class="op">=</span> <span class="st">"lcMethodKML"</span>,</span>
-<span>  nClusters <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">2</span>,</span>
+<span>  method <span class="op">=</span> <span class="st">"lcMethodDtwclust"</span>,</span>
+<span>  nClusters <span class="op">=</span> <span class="fl">2</span><span class="op">:</span><span class="fl">3</span>,</span>
 <span>  seed <span class="op">=</span> <span class="fl">1</span>,</span>
 <span>  response <span class="op">=</span> <span class="st">"Y"</span></span>
 <span><span class="op">)</span></span>
 <span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">kmlMethodGrid</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">dtwMethodGrid</span><span class="op">)</span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 2 × 5</span></span></span>
-<span><span class="co">#&gt;   proc    method      nClusters  seed response</span></span>
-<span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> latrend lcMethodKML         1     1 Y       </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span> latrend lcMethodKML         2     1 Y</span></span></code></pre></div>
+<span><span class="co">#&gt;   proc    method           nClusters  seed response</span></span>
+<span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> latrend lcMethodDtwclust         2     1 Y       </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span> latrend lcMethodDtwclust         3     1 Y</span></span></code></pre></div>
 <div class="section level3">
 <h3 id="specifying-the-gckm-method">Specifying the GCKM method<a class="anchor" aria-label="anchor" href="#specifying-the-gckm-method"></a>
 </h3>
@@ -274,24 +274,24 @@ the <code>fitGCKM</code> function we have just defined.</p>
 <span>  proc <span class="op">=</span> <span class="st">"fitGCKM"</span>,</span>
 <span>  method <span class="op">=</span> <span class="st">"lcMethodGCKM"</span>,</span>
 <span>  type <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"constant"</span>, <span class="st">"linear"</span><span class="op">)</span>,</span>
-<span>  nClusters <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">2</span>,</span>
+<span>  nClusters <span class="op">=</span> <span class="fl">2</span><span class="op">:</span><span class="fl">3</span>,</span>
 <span>  seed <span class="op">=</span> <span class="fl">1</span></span>
 <span><span class="op">)</span></span></code></pre></div>
 <p>Finally, we combine our method-specific permutation grids into one
 large grid. By using the <code>bind_rows()</code> function, mismatches
 in the columns between the grids are handled properly.</p>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">methodGrid</span> <span class="op">&lt;-</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/bind_rows.html" class="external-link">bind_rows</a></span><span class="op">(</span><span class="va">kmlMethodGrid</span>, <span class="va">gckmMethodGrid</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="va">methodGrid</span> <span class="op">&lt;-</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/bind_rows.html" class="external-link">bind_rows</a></span><span class="op">(</span><span class="va">dtwMethodGrid</span>, <span class="va">gckmMethodGrid</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">methodGrid</span><span class="op">)</span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 6 × 6</span></span></span>
-<span><span class="co">#&gt;   proc    method       nClusters  seed response type    </span></span>
-<span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>            <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> latrend lcMethodKML          1     1 Y        <span style="color: #BB0000;">NA</span>      </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span> latrend lcMethodKML          2     1 Y        <span style="color: #BB0000;">NA</span>      </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">3</span> fitGCKM lcMethodGCKM         1     1 <span style="color: #BB0000;">NA</span>       constant</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">4</span> fitGCKM lcMethodGCKM         1     1 <span style="color: #BB0000;">NA</span>       linear  </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">5</span> fitGCKM lcMethodGCKM         2     1 <span style="color: #BB0000;">NA</span>       constant</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">6</span> fitGCKM lcMethodGCKM         2     1 <span style="color: #BB0000;">NA</span>       linear</span></span></code></pre></div>
+<span><span class="co">#&gt;   proc    method           nClusters  seed response type    </span></span>
+<span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> latrend lcMethodDtwclust         2     1 Y        <span style="color: #BB0000;">NA</span>      </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span> latrend lcMethodDtwclust         3     1 Y        <span style="color: #BB0000;">NA</span>      </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">3</span> fitGCKM lcMethodGCKM             2     1 <span style="color: #BB0000;">NA</span>       constant</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">4</span> fitGCKM lcMethodGCKM             2     1 <span style="color: #BB0000;">NA</span>       linear  </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">5</span> fitGCKM lcMethodGCKM             3     1 <span style="color: #BB0000;">NA</span>       constant</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">6</span> fitGCKM lcMethodGCKM             3     1 <span style="color: #BB0000;">NA</span>       linear</span></span></code></pre></div>
 </div>
 </div>
 <div class="section level2">
@@ -325,7 +325,11 @@ computations:</p>
 <span>  data_grid <span class="op">=</span> <span class="va">dataGrid</span>, </span>
 <span>  proc_grid <span class="op">=</span> <span class="va">methodGrid</span>,</span>
 <span>  post_analyze <span class="op">=</span> <span class="va">analyzeModel</span></span>
-<span><span class="op">)</span></span></code></pre></div>
+<span><span class="op">)</span></span>
+<span><span class="co">#&gt; dtwclust:</span></span>
+<span><span class="co">#&gt; Setting random number generator to L'Ecuyer-CMRG (see RNGkind()).</span></span>
+<span><span class="co">#&gt; To read the included vignettes type: browseVignettes("dtwclust").</span></span>
+<span><span class="co">#&gt; See news(package = "dtwclust") after package updates.</span></span></code></pre></div>
 <p>The <code>result</code> table contains a <code>results</code> column
 containing the fitted models.</p>
 <div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
@@ -333,25 +337,25 @@ containing the fitted models.</p>
 <span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 48 × 15</span></span></span>
 <span><span class="co">#&gt;    fun     numTraj randomScales data.seed replications proc    method  nClusters</span></span>
 <span><span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;int&gt;</span></span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> dataGen      50          0.1         1            1 latrend lcMeth…         1</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> dataGen      50          0.1         1            1 latrend lcMeth…         2</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> dataGen      50          0.1         1            1 fitGCKM lcMeth…         1</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> dataGen      50          0.1         1            1 fitGCKM lcMeth…         1</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> dataGen      50          0.1         1            1 fitGCKM lcMeth…         2</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> dataGen      50          0.1         1            1 fitGCKM lcMeth…         2</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> dataGen     250          0.1         1            1 latrend lcMeth…         1</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> dataGen     250          0.1         1            1 latrend lcMeth…         2</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> dataGen     250          0.1         1            1 fitGCKM lcMeth…         1</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> dataGen     250          0.1         1            1 fitGCKM lcMeth…         1</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> dataGen      50          0.1         1            1 latrend lcMeth…         2</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> dataGen      50          0.1         1            1 latrend lcMeth…         3</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> dataGen      50          0.1         1            1 fitGCKM lcMeth…         2</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> dataGen      50          0.1         1            1 fitGCKM lcMeth…         2</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> dataGen      50          0.1         1            1 fitGCKM lcMeth…         3</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> dataGen      50          0.1         1            1 fitGCKM lcMeth…         3</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> dataGen     100          0.1         1            1 latrend lcMeth…         2</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> dataGen     100          0.1         1            1 latrend lcMeth…         3</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> dataGen     100          0.1         1            1 fitGCKM lcMeth…         2</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> dataGen     100          0.1         1            1 fitGCKM lcMeth…         2</span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># ℹ 38 more rows</span></span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># ℹ 7 more variables: seed &lt;dbl&gt;, response &lt;chr&gt;, type &lt;chr&gt;, BIC &lt;dbl&gt;,</span></span></span>
 <span><span class="co">#&gt; <span style="color: #949494;">#   APPA &lt;dbl&gt;, WMAE &lt;dbl&gt;, ARI &lt;dbl&gt;</span></span></span>
 <span><span class="co">#&gt; Number of data generating functions: 8</span></span>
 <span><span class="co">#&gt; Number of analyzing procedures: 6</span></span>
 <span><span class="co">#&gt; Number of replications: 1</span></span>
-<span><span class="co">#&gt; Estimated replications per hour: 246</span></span>
-<span><span class="co">#&gt; Start of the simulation: 2025-07-04 15:21:49.636104</span></span>
-<span><span class="co">#&gt; End of the simulation: 2025-07-04 15:22:04.22259</span></span></code></pre></div>
+<span><span class="co">#&gt; Estimated replications per hour: 284</span></span>
+<span><span class="co">#&gt; Start of the simulation: 2026-02-11 23:50:45.976189</span></span>
+<span><span class="co">#&gt; End of the simulation: 2026-02-11 23:50:58.633017</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="analyzing-the-results">Analyzing the results<a class="anchor" aria-label="anchor" href="#analyzing-the-results"></a>
@@ -361,7 +365,7 @@ package to handle the filtering and aggregation of the results
 table.</p>
 <div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://r-datatable.com" class="external-link">data.table</a></span><span class="op">)</span></span>
-<span><span class="va">resultsTable</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdatatable.gitlab.io/data.table/reference/as.data.table.html" class="external-link">as.data.table</a></span><span class="op">(</span><span class="va">result</span><span class="op">$</span><span class="va">simulation</span><span class="op">)</span></span></code></pre></div>
+<span><span class="va">resultsTable</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/data.table/man/as.data.table.html" class="external-link">as.data.table</a></span><span class="op">(</span><span class="va">result</span><span class="op">$</span><span class="va">simulation</span><span class="op">)</span></span></code></pre></div>
 <div class="section level3">
 <h3 id="recovery-of-the-number-of-clusters">Recovery of the number of clusters<a class="anchor" aria-label="anchor" href="#recovery-of-the-number-of-clusters"></a>
 </h3>
@@ -377,24 +381,16 @@ solution that minimizes the BIC.</p>
 <div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">resultsTable</span><span class="op">[</span>, <span class="fu">.</span><span class="op">(</span>K <span class="op">=</span> <span class="va">nClusters</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/which.min.html" class="external-link">which.min</a></span><span class="op">(</span><span class="va">BIC</span><span class="op">)</span><span class="op">]</span><span class="op">)</span>, keyby <span class="op">=</span> <span class="fu">.</span><span class="op">(</span><span class="va">numTraj</span>, <span class="va">randomScales</span>, <span class="va">data.seed</span>, <span class="va">method</span><span class="op">)</span><span class="op">]</span></span>
 <span><span class="co">#&gt; Key: &lt;numTraj, randomScales, data.seed, method&gt;</span></span>
-<span><span class="co">#&gt;     numTraj randomScales data.seed       method     K</span></span>
-<span><span class="co">#&gt;       &lt;num&gt;        &lt;num&gt;     &lt;int&gt;       &lt;char&gt; &lt;int&gt;</span></span>
-<span><span class="co">#&gt;  1:      50          0.1         1 lcMethodGCKM     2</span></span>
-<span><span class="co">#&gt;  2:      50          0.1         1  lcMethodKML     2</span></span>
-<span><span class="co">#&gt;  3:      50          0.1         2 lcMethodGCKM     2</span></span>
-<span><span class="co">#&gt;  4:      50          0.1         2  lcMethodKML     2</span></span>
-<span><span class="co">#&gt;  5:      50          0.5         1 lcMethodGCKM     2</span></span>
-<span><span class="co">#&gt;  6:      50          0.5         1  lcMethodKML     2</span></span>
-<span><span class="co">#&gt;  7:      50          0.5         2 lcMethodGCKM     2</span></span>
-<span><span class="co">#&gt;  8:      50          0.5         2  lcMethodKML     2</span></span>
-<span><span class="co">#&gt;  9:     250          0.1         1 lcMethodGCKM     2</span></span>
-<span><span class="co">#&gt; 10:     250          0.1         1  lcMethodKML     2</span></span>
-<span><span class="co">#&gt; 11:     250          0.1         2 lcMethodGCKM     2</span></span>
-<span><span class="co">#&gt; 12:     250          0.1         2  lcMethodKML     2</span></span>
-<span><span class="co">#&gt; 13:     250          0.5         1 lcMethodGCKM     2</span></span>
-<span><span class="co">#&gt; 14:     250          0.5         1  lcMethodKML     2</span></span>
-<span><span class="co">#&gt; 15:     250          0.5         2 lcMethodGCKM     2</span></span>
-<span><span class="co">#&gt; 16:     250          0.5         2  lcMethodKML     2</span></span></code></pre></div>
+<span><span class="co">#&gt;    numTraj randomScales data.seed       method     K</span></span>
+<span><span class="co">#&gt;      &lt;num&gt;        &lt;num&gt;     &lt;int&gt;       &lt;char&gt; &lt;int&gt;</span></span>
+<span><span class="co">#&gt; 1:      50          0.1         1 lcMethodGCKM     3</span></span>
+<span><span class="co">#&gt; 2:      50          0.1         2 lcMethodGCKM     3</span></span>
+<span><span class="co">#&gt; 3:      50          0.5         1 lcMethodGCKM     3</span></span>
+<span><span class="co">#&gt; 4:      50          0.5         2 lcMethodGCKM     3</span></span>
+<span><span class="co">#&gt; 5:     100          0.1         1 lcMethodGCKM     3</span></span>
+<span><span class="co">#&gt; 6:     100          0.1         2 lcMethodGCKM     3</span></span>
+<span><span class="co">#&gt; 7:     100          0.5         1 lcMethodGCKM     3</span></span>
+<span><span class="co">#&gt; 8:     100          0.5         2 lcMethodGCKM     3</span></span></code></pre></div>
 <p>Column <em>K</em> of the table shows the selected number of clusters
 for each scenario. This shows that estimating the number of clusters by
 minimizing the BIC results in a consistent overestimation of the number
@@ -418,16 +414,24 @@ cluster assignments.</p>
 <div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">resultsTable</span><span class="op">[</span><span class="va">nClusters</span> <span class="op">&gt;</span> <span class="fl">1</span>, <span class="fu">.</span><span class="op">(</span>ARI <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">ARI</span><span class="op">)</span><span class="op">)</span>, keyby <span class="op">=</span> <span class="fu">.</span><span class="op">(</span><span class="va">nClusters</span>, <span class="va">numTraj</span>, <span class="va">randomScales</span>, <span class="va">method</span><span class="op">)</span><span class="op">]</span></span>
 <span><span class="co">#&gt; Key: &lt;nClusters, numTraj, randomScales, method&gt;</span></span>
-<span><span class="co">#&gt;    nClusters numTraj randomScales       method       ARI</span></span>
-<span><span class="co">#&gt;        &lt;int&gt;   &lt;num&gt;        &lt;num&gt;       &lt;char&gt;     &lt;num&gt;</span></span>
-<span><span class="co">#&gt; 1:         2      50          0.1 lcMethodGCKM 1.0000000</span></span>
-<span><span class="co">#&gt; 2:         2      50          0.1  lcMethodKML 1.0000000</span></span>
-<span><span class="co">#&gt; 3:         2      50          0.5 lcMethodGCKM 0.4740203</span></span>
-<span><span class="co">#&gt; 4:         2      50          0.5  lcMethodKML 0.1374062</span></span>
-<span><span class="co">#&gt; 5:         2     250          0.1 lcMethodGCKM 0.9880822</span></span>
-<span><span class="co">#&gt; 6:         2     250          0.1  lcMethodKML 1.0000000</span></span>
-<span><span class="co">#&gt; 7:         2     250          0.5 lcMethodGCKM 0.4521689</span></span>
-<span><span class="co">#&gt; 8:         2     250          0.5  lcMethodKML 0.1323025</span></span></code></pre></div>
+<span><span class="co">#&gt;     nClusters numTraj randomScales           method       ARI</span></span>
+<span><span class="co">#&gt;         &lt;int&gt;   &lt;num&gt;        &lt;num&gt;           &lt;char&gt;     &lt;num&gt;</span></span>
+<span><span class="co">#&gt;  1:         2      50          0.1 lcMethodDtwclust 1.0000000</span></span>
+<span><span class="co">#&gt;  2:         2      50          0.1     lcMethodGCKM 1.0000000</span></span>
+<span><span class="co">#&gt;  3:         2      50          0.5 lcMethodDtwclust 0.4430913</span></span>
+<span><span class="co">#&gt;  4:         2      50          0.5     lcMethodGCKM 0.5397065</span></span>
+<span><span class="co">#&gt;  5:         2     100          0.1 lcMethodDtwclust 1.0000000</span></span>
+<span><span class="co">#&gt;  6:         2     100          0.1     lcMethodGCKM 1.0000000</span></span>
+<span><span class="co">#&gt;  7:         2     100          0.5 lcMethodDtwclust 0.3160729</span></span>
+<span><span class="co">#&gt;  8:         2     100          0.5     lcMethodGCKM 0.5386634</span></span>
+<span><span class="co">#&gt;  9:         3      50          0.1 lcMethodDtwclust 0.8137003</span></span>
+<span><span class="co">#&gt; 10:         3      50          0.1     lcMethodGCKM 0.6440895</span></span>
+<span><span class="co">#&gt; 11:         3      50          0.5 lcMethodDtwclust 0.2548463</span></span>
+<span><span class="co">#&gt; 12:         3      50          0.5     lcMethodGCKM 0.3706557</span></span>
+<span><span class="co">#&gt; 13:         3     100          0.1 lcMethodDtwclust 0.6439570</span></span>
+<span><span class="co">#&gt; 14:         3     100          0.1     lcMethodGCKM 0.6611139</span></span>
+<span><span class="co">#&gt; 15:         3     100          0.5 lcMethodDtwclust 0.3688610</span></span>
+<span><span class="co">#&gt; 16:         3     100          0.5     lcMethodGCKM 0.3736942</span></span></code></pre></div>
 <p>The trajectory assignment recovery is affected the most by the
 magnitude of the random scale (i.e., the amount of overlap between the
 clusters). Moreover, it is apparent that KmL performs much worse under
@@ -435,12 +439,16 @@ high random scale than GCKM.</p>
 <div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">resultsTable</span><span class="op">[</span><span class="va">nClusters</span> <span class="op">&gt;</span> <span class="fl">1</span>, <span class="fu">.</span><span class="op">(</span>ARI <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">ARI</span><span class="op">)</span><span class="op">)</span>, keyby <span class="op">=</span> <span class="fu">.</span><span class="op">(</span><span class="va">randomScales</span>, <span class="va">nClusters</span>, <span class="va">method</span><span class="op">)</span><span class="op">]</span></span>
 <span><span class="co">#&gt; Key: &lt;randomScales, nClusters, method&gt;</span></span>
-<span><span class="co">#&gt;    randomScales nClusters       method       ARI</span></span>
-<span><span class="co">#&gt;           &lt;num&gt;     &lt;int&gt;       &lt;char&gt;     &lt;num&gt;</span></span>
-<span><span class="co">#&gt; 1:          0.1         2 lcMethodGCKM 0.9940411</span></span>
-<span><span class="co">#&gt; 2:          0.1         2  lcMethodKML 1.0000000</span></span>
-<span><span class="co">#&gt; 3:          0.5         2 lcMethodGCKM 0.4630946</span></span>
-<span><span class="co">#&gt; 4:          0.5         2  lcMethodKML 0.1348544</span></span></code></pre></div>
+<span><span class="co">#&gt;    randomScales nClusters           method       ARI</span></span>
+<span><span class="co">#&gt;           &lt;num&gt;     &lt;int&gt;           &lt;char&gt;     &lt;num&gt;</span></span>
+<span><span class="co">#&gt; 1:          0.1         2 lcMethodDtwclust 1.0000000</span></span>
+<span><span class="co">#&gt; 2:          0.1         2     lcMethodGCKM 1.0000000</span></span>
+<span><span class="co">#&gt; 3:          0.1         3 lcMethodDtwclust 0.7288287</span></span>
+<span><span class="co">#&gt; 4:          0.1         3     lcMethodGCKM 0.6526017</span></span>
+<span><span class="co">#&gt; 5:          0.5         2 lcMethodDtwclust 0.3795821</span></span>
+<span><span class="co">#&gt; 6:          0.5         2     lcMethodGCKM 0.5391850</span></span>
+<span><span class="co">#&gt; 7:          0.5         3 lcMethodDtwclust 0.3118537</span></span>
+<span><span class="co">#&gt; 8:          0.5         3     lcMethodGCKM 0.3721750</span></span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="residual-error">Residual error<a class="anchor" aria-label="anchor" href="#residual-error"></a>
@@ -456,12 +464,12 @@ improvement is gained for the three-cluster solution.</p>
 <div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">resultsTable</span><span class="op">[</span><span class="va">randomScales</span> <span class="op">==</span> <span class="fl">.1</span>, <span class="fu">.</span><span class="op">(</span>WMAE <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">WMAE</span><span class="op">)</span><span class="op">)</span>, keyby <span class="op">=</span> <span class="fu">.</span><span class="op">(</span><span class="va">nClusters</span>, <span class="va">method</span><span class="op">)</span><span class="op">]</span></span>
 <span><span class="co">#&gt; Key: &lt;nClusters, method&gt;</span></span>
-<span><span class="co">#&gt;    nClusters       method      WMAE</span></span>
-<span><span class="co">#&gt;        &lt;int&gt;       &lt;char&gt;     &lt;num&gt;</span></span>
-<span><span class="co">#&gt; 1:         1 lcMethodGCKM 0.2627083</span></span>
-<span><span class="co">#&gt; 2:         1  lcMethodKML 0.2627083</span></span>
-<span><span class="co">#&gt; 3:         2 lcMethodGCKM 0.1120481</span></span>
-<span><span class="co">#&gt; 4:         2  lcMethodKML 0.1119268</span></span></code></pre></div>
+<span><span class="co">#&gt;    nClusters           method       WMAE</span></span>
+<span><span class="co">#&gt;        &lt;int&gt;           &lt;char&gt;      &lt;num&gt;</span></span>
+<span><span class="co">#&gt; 1:         2 lcMethodDtwclust 0.11863613</span></span>
+<span><span class="co">#&gt; 2:         2     lcMethodGCKM 0.10405882</span></span>
+<span><span class="co">#&gt; 3:         3 lcMethodDtwclust 0.11310514</span></span>
+<span><span class="co">#&gt; 4:         3     lcMethodGCKM 0.09401987</span></span></code></pre></div>
 <p>As one would expect, the residual error is strongly affected by the
 magnitude of the random scale.</p>
 <div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
@@ -469,10 +477,10 @@ magnitude of the random scale.</p>
 <span><span class="co">#&gt; Key: &lt;randomScales, nClusters&gt;</span></span>
 <span><span class="co">#&gt;    randomScales nClusters      WMAE</span></span>
 <span><span class="co">#&gt;           &lt;num&gt;     &lt;int&gt;     &lt;num&gt;</span></span>
-<span><span class="co">#&gt; 1:          0.1         1 0.2627083</span></span>
-<span><span class="co">#&gt; 2:          0.1         2 0.1120077</span></span>
-<span><span class="co">#&gt; 3:          0.5         1 0.4563443</span></span>
-<span><span class="co">#&gt; 4:          0.5         2 0.3257807</span></span></code></pre></div>
+<span><span class="co">#&gt; 1:          0.1         2 0.1089179</span></span>
+<span><span class="co">#&gt; 2:          0.1         3 0.1003816</span></span>
+<span><span class="co">#&gt; 3:          0.5         2 0.3337293</span></span>
+<span><span class="co">#&gt; 4:          0.5         3 0.2493098</span></span></code></pre></div>
 </div>
 </div>
 <div class="footnotes footnotes-end-of-document">
@@ -506,7 +514,7 @@ the MAE.<a href="#fnref2" class="footnote-back">↩︎</a></p></li>
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.3.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.0.</p>
 </div>
 
       </footer>

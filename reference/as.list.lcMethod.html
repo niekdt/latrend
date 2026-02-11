@@ -17,7 +17,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">latrend</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.6.2</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.6.3</span>
       </span>
     </div>
 
@@ -57,7 +57,7 @@
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Extract the method arguments as a list</h1>
-    <small class="dont-index">Source: <a href="https://github.com/niekdt/latrend/blob/v1.6.2/R/method.R" class="external-link"><code>R/method.R</code></a></small>
+    <small class="dont-index">Source: <a href="https://github.com/niekdt/latrend/blob/master/R/method.R" class="external-link"><code>R/method.R</code></a></small>
     <div class="hidden name"><code>as.list.lcMethod.Rd</code></div>
     </div>
 
@@ -107,14 +107,14 @@ Alternatively, a <code>function</code> or <code>list</code> of <code>function</c
     <h2>See also</h2>
     <div class="dont-index"><p>Other lcMethod functions:
 <code><a href="indexy.html">[[,lcMethod-method</a></code>,
-<code><a href="as.data.frame.lcMethod.html">as.data.frame.lcMethod</a>()</code>,
-<code><a href="as.data.frame.lcMethods.html">as.data.frame.lcMethods</a>()</code>,
-<code><a href="as.lcMethods.html">as.lcMethods</a>()</code>,
-<code><a href="evaluate.lcMethod.html">evaluate.lcMethod</a>()</code>,
-<code><a href="formula.lcMethod.html">formula.lcMethod</a>()</code>,
+<code><a href="as.data.frame.lcMethod.html">as.data.frame.lcMethod()</a></code>,
+<code><a href="as.data.frame.lcMethods.html">as.data.frame.lcMethods()</a></code>,
+<code><a href="as.lcMethods.html">as.lcMethods()</a></code>,
+<code><a href="evaluate.lcMethod.html">evaluate.lcMethod()</a></code>,
+<code><a href="formula.lcMethod.html">formula.lcMethod()</a></code>,
 <code><a href="lcMethod-class.html">lcMethod-class</a></code>,
 <code><a href="names-lcMethod-method.html">names,lcMethod-method</a></code>,
-<code><a href="update.lcMethod.html">update.lcMethod</a>()</code></p></div>
+<code><a href="update.lcMethod.html">update.lcMethod()</a></code></p></div>
     </div>
 
     <div id="ref-examples">
@@ -136,13 +136,13 @@ Alternatively, a <code>function</code> or <code>list</code> of <code>function</c
 <span class="r-out co"><span class="r-pr">#&gt;</span> {</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     mean(x, ..., na.rm = TRUE)</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> }</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;bytecode: 0x55a20ec9f428&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;bytecode: 0x55d65f41ed08&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> &lt;environment: namespace:latrend&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $standardize</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> function (x, center = TRUE, scale = TRUE) </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> UseMethod("scale")</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;bytecode: 0x55a20ecccc90&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;bytecode: 0x55d65f457f20&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> &lt;environment: namespace:base&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $method</span>
@@ -174,7 +174,7 @@ Alternatively, a <code>function</code> or <code>list</code> of <code>function</c
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $formula</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Y ~ Time</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;environment: 0x55a20ef3d518&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;environment: 0x55d656cf5cb0&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">as.list</a></span><span class="op">(</span><span class="va">method</span>, args <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"id"</span>, <span class="st">"time"</span><span class="op">)</span><span class="op">)</span></span></span>
@@ -190,65 +190,13 @@ Alternatively, a <code>function</code> or <code>list</code> of <code>function</c
 <span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">as.list</a></span><span class="op">(</span><span class="va">method</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span>  <span class="co"># select arguments used by kml()</span></span></span>
-<span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">as.list</a></span><span class="op">(</span><span class="va">method</span>, args <span class="op">=</span> <span class="fu">kml</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/pkg/kml/man/kml.html" class="external-link">kml</a></span><span class="op">)</span></span></span>
+<span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">as.list</a></span><span class="op">(</span><span class="va">method</span>, args <span class="op">=</span> <span class="fu">kml</span><span class="fu">::</span><span class="va">kml</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span>  <span class="co"># select arguments used by either kml() or parALGO()</span></span></span>
-<span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">as.list</a></span><span class="op">(</span><span class="va">method</span>, args <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fu">kml</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/pkg/kml/man/kml.html" class="external-link">kml</a></span>, <span class="fu">kml</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/pkg/kml/man/parKml.html" class="external-link">parALGO</a></span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">as.list</a></span><span class="op">(</span><span class="va">method</span>, args <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fu">kml</span><span class="fu">::</span><span class="va">kml</span>, <span class="fu">kml</span><span class="fu">::</span><span class="va">parALGO</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="op">}</span></span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Loading required package: kml</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Loading required package: clv</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Loading required package: cluster</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Loading required package: class</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Loading required package: longitudinalData</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Loading required package: rgl</span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>RGL: unable to open X11 display</span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>'rgl.init' failed, will use the null device.</span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> See '?rgl.useNULL' for ways to avoid this warning.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Loading required package: misc3d</span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>no DISPLAY variable so Tk is not available</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Attaching package: ‘longitudinalData’</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> The following object is masked from ‘package:latrend’:</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>     meanNA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $nbRedrawing</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 20</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $maxIt</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 200</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $imputationMethod</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "copyMean"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $distanceName</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "euclidean"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $power</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $distance</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> function () </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> {</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> }</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;environment: 0x55a20b834e90&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $centerMethod</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> function (x) </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> {</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     mean(x, na.rm = TRUE)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> }</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;bytecode: 0x55a2107fdcf8&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;environment: namespace:longitudinalData&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $startingCond</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "nearlyAll"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $nbCriterion</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $scale</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] TRUE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>there is no package called ‘kml’</span>
 </code></pre></div>
     </div>
   </div>
@@ -263,7 +211,7 @@ Alternatively, a <code>function</code> or <code>list</code> of <code>function</c
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.3.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.0.</p>
 </div>
 
       </footer></div>

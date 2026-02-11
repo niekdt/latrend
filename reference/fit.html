@@ -19,7 +19,7 @@ The fit() function of the lcMethod object estimates the model with the evaluated
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">latrend</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.6.2</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.6.3</span>
       </span>
     </div>
 
@@ -59,7 +59,7 @@ The fit() function of the lcMethod object estimates the model with the evaluated
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1><code>lcMethod</code> estimation step: logic for fitting the method to the processed data</h1>
-    <small class="dont-index">Source: <a href="https://github.com/niekdt/latrend/blob/v1.6.2/R/generics.R" class="external-link"><code>R/generics.R</code></a>, <a href="https://github.com/niekdt/latrend/blob/v1.6.2/R/method.R" class="external-link"><code>R/method.R</code></a></small>
+    <small class="dont-index">Source: <a href="https://github.com/niekdt/latrend/blob/master/R/generics.R" class="external-link"><code>R/generics.R</code></a>, <a href="https://github.com/niekdt/latrend/blob/master/R/method.R" class="external-link"><code>R/method.R</code></a></small>
     <div class="hidden name"><code>fit.Rd</code></div>
     </div>
 
@@ -110,12 +110,12 @@ For fitting an <code>lcMethod</code> object to a dataset, use the <code><a href=
 
 <p>This method should be implemented for all <code>lcMethod</code> subclasses.</p>
 <div class="sourceCode"><pre><code><span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/methods/setMethod.html" class="external-link">setMethod</a></span><span class="op">(</span><span class="st">"fit"</span>, <span class="st">"lcMethodExample"</span>, <span class="kw">function</span><span class="op">(</span><span class="va">method</span>, <span class="va">data</span>, <span class="va">envir</span>, <span class="va">verbose</span><span class="op">)</span> <span class="op">{</span></span>
+<span><span class="kw">setMethod</span><span class="op">(</span><span class="st">"fit"</span>, <span class="st">"lcMethodExample"</span>, <span class="kw">function</span><span class="op">(</span><span class="va">method</span>, <span class="va">data</span>, <span class="va">envir</span>, <span class="va">verbose</span><span class="op">)</span> <span class="op">{</span></span>
 <span>  <span class="co"># estimate the model or cluster parameters</span></span>
 <span>  <span class="va">coefs</span> <span class="op">&lt;-</span> <span class="va">FIT_CODE</span></span>
 <span></span>
 <span>  <span class="co"># create the lcModel object</span></span>
-<span>  <span class="fu"><a href="https://rdrr.io/r/methods/new.html" class="external-link">new</a></span><span class="op">(</span><span class="st">"lcModelExample"</span>,</span>
+<span>  <span class="fu">new</span><span class="op">(</span><span class="st">"lcModelExample"</span>,</span>
 <span>    method <span class="op">=</span> <span class="va">method</span>,</span>
 <span>    data <span class="op">=</span> <span class="va">data</span>,</span>
 <span>    model <span class="op">=</span> <span class="va">coefs</span>,</span>
@@ -149,7 +149,7 @@ For fitting an <code>lcMethod</code> object to a dataset, use the <code><a href=
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.3.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.0.</p>
 </div>
 
       </footer></div>

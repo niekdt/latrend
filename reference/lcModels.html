@@ -18,7 +18,7 @@ The lcModels() function creates a flat (named) list of lcModel objects. Duplicat
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">latrend</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.6.2</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.6.3</span>
       </span>
     </div>
 
@@ -58,7 +58,7 @@ The lcModels() function creates a flat (named) list of lcModel objects. Duplicat
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Construct a list of <code>lcModel</code> objects</h1>
-    <small class="dont-index">Source: <a href="https://github.com/niekdt/latrend/blob/v1.6.2/R/models.R" class="external-link"><code>R/models.R</code></a></small>
+    <small class="dont-index">Source: <a href="https://github.com/niekdt/latrend/blob/master/R/models.R" class="external-link"><code>R/models.R</code></a></small>
     <div class="hidden name"><code>lcModels.Rd</code></div>
     </div>
 
@@ -99,13 +99,13 @@ The lcModels() function creates a flat (named) list of lcModel objects. Duplicat
     <div id="see-also">
     <h2>See also</h2>
     <div class="dont-index"><p>Other lcModels functions:
-<code><a href="as.lcModels.html">as.lcModels</a>()</code>,
+<code><a href="as.lcModels.html">as.lcModels()</a></code>,
 <code><a href="lcModels-class.html">lcModels-class</a></code>,
-<code><a href="max.lcModels.html">max.lcModels</a>()</code>,
-<code><a href="min.lcModels.html">min.lcModels</a>()</code>,
-<code><a href="plotMetric.html">plotMetric</a>()</code>,
-<code><a href="print.lcModels.html">print.lcModels</a>()</code>,
-<code><a href="subset.lcModels.html">subset.lcModels</a>()</code></p></div>
+<code><a href="max.lcModels.html">max.lcModels()</a></code>,
+<code><a href="min.lcModels.html">min.lcModels()</a></code>,
+<code><a href="plotMetric.html">plotMetric()</a></code>,
+<code><a href="print.lcModels.html">print.lcModels()</a></code>,
+<code><a href="subset.lcModels.html">subset.lcModels()</a></code></p></div>
     </div>
 
     <div id="ref-examples">
@@ -118,12 +118,9 @@ The lcModels() function creates a flat (named) list of lcModel objects. Duplicat
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu">lcModels</span><span class="op">(</span><span class="va">lmkmModel</span>, <span class="va">rngModel</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> List of 2 lcModels with</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   .name .method</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1     1    lmkm</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2     2    part</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               standardize</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1 new("standardGeneric", .Data = function (x, center = TRUE, scale = TRUE) standardGeneric("scale"), generic = structure("scale", package = "base"),     package = "base", group = list(), valueClass = character(0),     signature = c("x", "center", "scale"), default = new("derivedDefaultMethod",         .Data = function (x, center = TRUE, scale = TRUE)         UseMethod("scale"), target = new("signature", .Data = "ANY",             names = "x", package = "methods"), defined = new("signature",             .Data = "ANY", names = "x", package = "methods"),         generic = structure("scale", package = "base")), skeleton = (new("derivedDefaultMethod",         .Data = function (x, center = TRUE, scale = TRUE)         UseMethod("scale"), target = new("signature", .Data = "ANY",             names = "x", package = "methods"), defined = new("signature",             .Data = "ANY", names = "x", package = "methods"),         generic = structure("scale", package = "base")))(x, center,         scale))</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   .name .method                                                  standardize</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1     1    lmkm function (x, center = TRUE, scale = TRUE) UseMethod("scale")</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2     2    part                                                         &lt;NA&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   method model     y   qr singular.ok iter.max nstart</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1     qr  TRUE FALSE TRUE        TRUE       10      1</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2   &lt;NA&gt;    NA    NA   NA          NA       NA     NA</span>
@@ -139,12 +136,12 @@ The lcModels() function creates a flat (named) list of lcModel objects. Duplicat
 <span class="r-out co"><span class="r-pr">#&gt;</span>       .name .method</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1 defaults1    lmkm</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2 defaults2    part</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               standardize</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1 new("standardGeneric", .Data = function (x, center = TRUE, scale = TRUE) standardGeneric("scale"), generic = structure("scale", package = "base"),     package = "base", group = list(), valueClass = character(0),     signature = c("x", "center", "scale"), default = new("derivedDefaultMethod",         .Data = function (x, center = TRUE, scale = TRUE)         UseMethod("scale"), target = new("signature", .Data = "ANY",             names = "x", package = "methods"), defined = new("signature",             .Data = "ANY", names = "x", package = "methods"),         generic = structure("scale", package = "base")), skeleton = (new("derivedDefaultMethod",         .Data = function (x, center = TRUE, scale = TRUE)         UseMethod("scale"), target = new("signature", .Data = "ANY",             names = "x", package = "methods"), defined = new("signature",             .Data = "ANY", names = "x", package = "methods"),         generic = structure("scale", package = "base")))(x, center,         scale))</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   method model     y   qr singular.ok iter.max nstart</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1     qr  TRUE FALSE TRUE        TRUE       10      1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2   &lt;NA&gt;    NA    NA   NA          NA       NA     NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                                                    standardize method model</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 function (x, center = TRUE, scale = TRUE) UseMethod("scale")     qr  TRUE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2                                                         &lt;NA&gt;   &lt;NA&gt;    NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       y   qr singular.ok iter.max nstart</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 FALSE TRUE        TRUE       10      1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2    NA   NA          NA       NA     NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                                          algorithm  formula alpha   name</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1 c("Hartigan-Wong", "Lloyd", "Forgy", "MacQueen") Y ~ Time    NA   &lt;NA&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2                                             &lt;NA&gt;     &lt;NA&gt;    10 random</span>
@@ -165,7 +162,7 @@ The lcModels() function creates a flat (named) list of lcModel objects. Duplicat
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.3.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.0.</p>
 </div>
 
       </footer></div>
