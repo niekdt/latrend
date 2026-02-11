@@ -6,7 +6,7 @@ output:
     toc: true
     toc_depth : 2  
 vignette: >
-  %\VignetteIndexEntry{Implementing new models}
+  %\VignetteIndexEntry{Implementing new methods}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
   %\VignetteDepends{ggplot2}
