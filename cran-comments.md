@@ -1,6 +1,7 @@
-# 2026-02-05 latrend [v1.6.3]
+# 2026-02-12 latrend [v1.6.3]
 
 - Resolve CRAN errors due to kml archival
+- Removed kml links from docs
 
 # 2025-07-04 latrend [v1.6.2](https://github.com/niekdt/latrend/milestone/12)
 
