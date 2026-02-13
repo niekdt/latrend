@@ -6,7 +6,7 @@ tests = c('method', 'cluster-three')
 .loadOptionalPackage('akmedoids')
 
 # Generate data ####
-data(traj, package = 'akmedoids')
+data(traj)
 capture.output({
   impTraj = data_imputation(traj, id_field = TRUE, method = 2, replace_with = 1, fill_zeros = FALSE)
 })
