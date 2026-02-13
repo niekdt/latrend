@@ -21,7 +21,7 @@ lcMethodKML(
 
 \item{nClusters}{The number of clusters to estimate.}
 
-\item{...}{Arguments passed to \code{kml::parALGO} and \code{kml::kml}.
+\item{...}{Arguments passed to \code{parALGO} and \code{kml} from kml package.
 
 The following external arguments are ignored: object, nbClusters, parAlgo, toPlot, saveFreq}
 }

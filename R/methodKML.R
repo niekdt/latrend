@@ -15,7 +15,7 @@ setClass('lcMethodKML', contains = 'lcMatrixMethod')
 #' @param time The name of the time variable.
 #' @param id The name of the trajectory identifier variable.
 #' @param nClusters The number of clusters to estimate.
-#' @param ... Arguments passed to `kml::parALGO` and `kml::kml`.
+#' @param ... Arguments passed to `parALGO` and `kml` from kml package.
 #'
 #' The following external arguments are ignored: object, nbClusters, parAlgo, toPlot, saveFreq
 #' @examples

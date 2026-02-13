@@ -349,17 +349,6 @@ as.character.lcMethod = function(x, ..., eval = FALSE, width = 40, prefix = '', 
 #' as.list(method)
 #'
 #' as.list(method, args = c("id", "time"))
-#'
-#' if (require("kml")) {
-#'   method <- lcMethodKML("Y", id = "Id", time = "Time")
-#'   as.list(method)
-#'
-#'   # select arguments used by kml()
-#'   as.list(method, args = kml::kml)
-#'
-#'   # select arguments used by either kml() or parALGO()
-#'   as.list(method, args = c(kml::kml, kml::parALGO))
-#' }
 #' @family lcMethod functions
 as.list.lcMethod = function(x, ..., args = names(x), eval = TRUE, expand = FALSE, envir = NULL) {
   assert_that(
