@@ -136,13 +136,13 @@ Alternatively, a <code>function</code> or <code>list</code> of <code>function</c
 <span class="r-out co"><span class="r-pr">#&gt;</span> {</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     mean(x, ..., na.rm = TRUE)</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> }</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;bytecode: 0x55c5b28c2360&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;bytecode: 0x55c8dadfc518&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> &lt;environment: namespace:latrend&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $standardize</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> function (x, center = TRUE, scale = TRUE) </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> UseMethod("scale")</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;bytecode: 0x55c5b28fb2f8&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;bytecode: 0x55c8dae30d40&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> &lt;environment: namespace:base&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $method</span>
@@ -174,7 +174,7 @@ Alternatively, a <code>function</code> or <code>list</code> of <code>function</c
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $formula</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Y ~ Time</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;environment: 0x55c5aa603b98&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;environment: 0x55c8d27d9cd8&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">as.list</a></span><span class="op">(</span><span class="va">method</span>, args <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"id"</span>, <span class="st">"time"</span><span class="op">)</span><span class="op">)</span></span></span>
@@ -184,19 +184,6 @@ Alternatively, a <code>function</code> or <code>list</code> of <code>function</c
 <span class="r-out co"><span class="r-pr">#&gt;</span> $time</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Time"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">require</a></span><span class="op">(</span><span class="st">"kml"</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span></span>
-<span class="r-in"><span>  <span class="va">method</span> <span class="op">&lt;-</span> <span class="fu"><a href="lcMethodKML.html">lcMethodKML</a></span><span class="op">(</span><span class="st">"Y"</span>, id <span class="op">=</span> <span class="st">"Id"</span>, time <span class="op">=</span> <span class="st">"Time"</span><span class="op">)</span></span></span>
-<span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">as.list</a></span><span class="op">(</span><span class="va">method</span><span class="op">)</span></span></span>
-<span class="r-in"><span></span></span>
-<span class="r-in"><span>  <span class="co"># select arguments used by kml()</span></span></span>
-<span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">as.list</a></span><span class="op">(</span><span class="va">method</span>, args <span class="op">=</span> <span class="fu">kml</span><span class="fu">::</span><span class="va">kml</span><span class="op">)</span></span></span>
-<span class="r-in"><span></span></span>
-<span class="r-in"><span>  <span class="co"># select arguments used by either kml() or parALGO()</span></span></span>
-<span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">as.list</a></span><span class="op">(</span><span class="va">method</span>, args <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fu">kml</span><span class="fu">::</span><span class="va">kml</span>, <span class="fu">kml</span><span class="fu">::</span><span class="va">parALGO</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="op">}</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Loading required package: kml</span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>there is no package called ‘kml’</span>
 </code></pre></div>
     </div>
   </div>
