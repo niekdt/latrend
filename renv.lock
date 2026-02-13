@@ -750,13 +750,13 @@
     },
     "akmedoids": {
       "Package": "akmedoids",
-      "Version": "1.2.6",
-      "Source": "GitHub",
+      "Version": "1.3.0",
+      "Source": "Repository",
       "Type": "Package",
       "Title": "Anchored Kmedoids for Longitudinal Data Clustering",
       "Author": "Monsuru Adepeju [cre, aut],  Samuel Langton [aut],  Jon Bannister [aut]",
       "Maintainer": "Monsuru Adepeju <monsuur2010@yahoo.com>",
-      "Description": "Advances a novel adaptation of longitudinal k-means clustering  technique (Genolini et al. (2015) <doi:10.18637/jss.v065.i04>)  for grouping trajectories based on the similarities of their  long-term trends and determines the optimal solution based  on either the average silhouette width (Rousseeuw P. J. 1987)  or the Calinski-Harabatz criterion (Calinski and Harabatz (1974)  <doi:10.1080/03610927408827101>). Includes functions to extract  descriptive statistics and generate a visualization of the  resulting groups, drawing methods from the 'ggplot2' library (Wickham H. (2016)  <doi:10.1007/978-3-319-24277-4>). The package also includes a number of  other useful functions for exploring and manipulating longitudinal  data prior to the clustering process.",
+      "Description": "Advances a novel adaptation of longitudinal k-means clustering  technique (Genolini et al. (2015) <doi:10.18637/jss.v065.i04>)  for grouping trajectories based on the similarities of their  long-term trends and determines the optimal solution based  on either the average silhouette width (Rousseeuw P. J. 1987)  or the Calinski-Harabatz criterion (Calinski and Harabatz (1974)  <doi:10.1080/03610927408827101>). Includes functions to extract  descriptive statistics and generate a visualisation of the  resulting groups, drawing methods from the 'ggplot2' library (Wickham H. (2016)  <doi:10.1007/978-3-319-24277-4>). The package also includes a number of  other useful functions for exploring and manipulating longitudinal  data prior to the clustering process.",
       "Language": "en-US",
       "License": "GPL-3",
       "URL": "https://cran.r-project.org/package=akmedoids",
@@ -768,11 +768,11 @@
       "LazyData": "true",
       "Imports": [
         "kml",
-        "Hmisc",
-        "reshape2",
         "stats",
         "utils",
+        "dplyr",
         "signal",
+        "Hmisc",
         "grDevices",
         "ggplot2",
         "clusterCrit"
@@ -781,20 +781,13 @@
       "Suggests": [
         "knitr",
         "rmarkdown",
-        "testthat",
         "digest",
-        "dplyr",
         "gdtools",
-        "kableExtra",
-        "devtools",
-        "rgl"
+        "kableExtra"
       ],
-      "RemoteType": "github",
-      "RemoteHost": "api.github.com",
-      "RemoteUsername": "MAnalytics",
-      "RemoteRepo": "akmedoids",
-      "RemoteRef": "master",
-      "RemoteSha": "b529e04a70e34ee4b0bb7362f2d0a5c39fe53534"
+      "VignetteBuilder": "knitr",
+      "NeedsCompilation": "no",
+      "Repository": "CRAN"
     },
     "ash": {
       "Package": "ash",
