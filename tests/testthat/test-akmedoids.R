@@ -1,10 +1,9 @@
-context('akmedoids')
 skip_if_not_installed('akmedoids', minimum_version = '1.3.0')
 rngReset()
 # akmedoids requires at least 3 clusters, so most tests cannot be applied
 tests = c('method', 'cluster-three')
 
-library(akmedoids)
+.loadOptionalPackage('akmedoids')
 
 # Generate data ####
 data(traj, package = 'akmedoids')
