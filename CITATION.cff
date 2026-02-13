@@ -14,7 +14,7 @@ authors:
 title: "latrend: A Framework for Clustering Longitudinal Data"
 start: 108
 end: 135
-volume: "17/1"
+volume: 17
 year: 2025
 doi: "10.32614/RJ-2025-006"
 journal: "The R Journal"
