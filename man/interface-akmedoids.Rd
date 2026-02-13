@@ -37,6 +37,6 @@
 akmedoids interface
 }
 \seealso{
-\link{lcMethodAkmedoids} \code{akmedoids::akclustr}
+\link{lcMethodAkmedoids} \code{akclustr} from the akmedoids package
 }
 \keyword{internal}
