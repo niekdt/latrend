@@ -54,6 +54,7 @@ Suggests:
     cluster,
     evaluate,
     lme4,
+    reformulas,
     covr,
     lintr,
     tinytex,
