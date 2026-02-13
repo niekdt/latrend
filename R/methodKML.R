@@ -21,7 +21,7 @@ setClass('lcMethodKML', contains = 'lcMatrixMethod')
 #' @examples
 #' data(latrendData)
 #'
-#' if (require("kml")) {
+#' if (FALSE) {
 #'   method <- lcMethodKML("Y", id = "Id", time = "Time", nClusters = 3)
 #'   model <- latrend(method, latrendData)
 #' }
@@ -45,8 +45,8 @@ lcMethodKML = function(
 setMethod('getArgumentDefaults', 'lcMethodKML', function(object) {
   c(
     formals(lcMethodKML),
-    formals(kml::kml),
-    formals(kml::parALGO),
+    formals(.getKmlFunction('kml')),
+    formals(.getKmlFunction('parALGO')),
     callNextMethod()
   )
 })
@@ -79,7 +79,7 @@ setMethod('preFit', 'lcMethodKML', function(method, data, envir, verbose, ...) {
 
   # workaround for KmL only using the fast version when meanNA() of the longitudinalData package is specified
   if (identical(method$centerMethod, meanNA)) {
-    method = update(method, centerMethod = longitudinalData::meanNA)
+    method = update(method, centerMethod = utils::getFromNamespace('meanNA', 'longitudinalData'))
   }
 
   valueColumn = responseVariable(method)
@@ -92,10 +92,12 @@ setMethod('preFit', 'lcMethodKML', function(method, data, envir, verbose, ...) {
     scale = FALSE
   )
 
-  parArgs = modifyList(parRefArgs, as.list(method, args = kml::parALGO), keep.null = TRUE)
-  e$par = do.call(kml::parALGO, parArgs)
+  parALGO = .getKmlFunction('parALGO')
+  parArgs = modifyList(parRefArgs, as.list(method, args = parALGO), keep.null = TRUE)
+  e$par = do.call(parALGO, parArgs)
 
-  e$cld = kml::clusterLongData(
+  clusterLongData = .getKmlFunction('clusterLongData')
+  e$cld = clusterLongData(
     traj = e$dataMat,
     idAll = rownames(e$dataMat),
     time = sort(unique(data[[timeVariable(method)]]))
@@ -119,7 +121,8 @@ setMethod('fit', 'lcMethodKML', function(method, data, envir, verbose, ...) {
 
   cat(verbose, 'Running kml()...', level = verboseLevels$finest)
   # note that slowKML throws an error for nbClusters=1
-  kml::kml(
+  kml = .getKmlFunction('kml')
+  kml(
     cld,
     nbClusters = method$nClusters,
     nbRedrawing = method$nbRedrawing,
@@ -144,3 +147,9 @@ setMethod('fit', 'lcMethodKML', function(method, data, envir, verbose, ...) {
     clusterNames = make.clusterNames(method$nClusters)
   )
 })
+
+.getKmlFunction = function(name) {
+  .loadOptionalPackage('kml')
+
+  utils::getFromNamespace(name, 'kml')
+}

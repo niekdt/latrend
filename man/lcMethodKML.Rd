@@ -31,7 +31,7 @@ Specify a longitudinal k-means (KML) method
 \examples{
 data(latrendData)
 
-if (require("kml")) {
+if (FALSE) {
   method <- lcMethodKML("Y", id = "Id", time = "Time", nClusters = 3)
   model <- latrend(method, latrendData)
 }

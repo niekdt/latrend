@@ -65,7 +65,8 @@ setMethod('postprob', 'lcModelKML', function(object) {
     pp = matrix(1, nrow = nIds(object), ncol = 1)
   } else {
     ppRaw = getKMLPartition(object)@postProba
-    trajClusters = kml::getClusters(object@model, nbCluster = nClusters(object), asInteger = TRUE)
+    getClustersFun = .getKmlFunction('getClusters')
+    trajClusters = getClustersFun(object@model, nbCluster = nClusters(object), asInteger = TRUE)
 
     assert_that(
       length(trajClusters) == nIds(object),
@@ -113,11 +114,13 @@ setMethod('predictPostprob', 'lcModelKML', function(object, newdata, ...) {
 
   if (is.null(formalArgs(distFun))) {
     affectFun = function(traj, centers) {
-      kml::affectIndivC(traj = traj, clustersCenter = centers)
+      fun = .getKmlFunction('affectIndivC')
+      fun(traj = traj, clustersCenter = centers)
     }
   } else {
     affectFun = function(traj, centers) {
-      kml::affectIndiv(traj = traj, clustersCenter = centers, distance = distFun)
+      fun = .getKmlFunction('affectIndiv')
+      fun(traj = traj, clustersCenter = centers, distance = distFun)
     }
   }
 
@@ -142,9 +145,11 @@ getKMLPartition = function(object) {
 }
 
 computeKMLCenters = function(object) {
-  trajClusters = kml::getClusters(object@model, nbCluster = nClusters(object))
+  getClusters = .getKmlFunction('getClusters')
+  trajClusters = getClusters(object@model, nbCluster = nClusters(object))
 
-  centerMat = kml::calculTrajMean(
+  calculTrajMean = .getKmlFunction('calculTrajMean')
+  centerMat = calculTrajMean(
     traj = object@model@traj,
     clust = na.omit(trajClusters),
     centerMethod = getLcMethod(object)$centerMethod
