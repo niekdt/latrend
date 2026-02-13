@@ -32,3 +32,4 @@ check
 nul
 private/
 cache
+.Renviron
