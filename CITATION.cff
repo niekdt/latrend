@@ -1,5 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
+type: article
 authors:
 - family-names: "Den Teuling"
   given-names: "Niek"
@@ -11,6 +12,10 @@ authors:
   given-names: "Edwin"
   orcid: "https://orcid.org/0000-0001-9157-7224"
 title: "latrend: A Framework for Clustering Longitudinal Data"
-version: 1.6.2
-date-released: 2025-06-30
+start: 108
+end: 135
+volume: 17/1
+year: 2025
+doi: "10.32614/RJ-2025-006"
+journal: "The R Journal"
 url: "https://github.com/niekdt/latrend"
