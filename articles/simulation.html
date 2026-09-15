@@ -85,7 +85,7 @@
 Teuling</h4>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/niekdt/latrend/blob/v1.6.3/vignettes/simulation.Rmd" class="external-link"><code>vignettes/simulation.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/niekdt/latrend/blob/master/vignettes/simulation.Rmd" class="external-link"><code>vignettes/simulation.Rmd</code></a></small>
       <div class="hidden name"><code>simulation.Rmd</code></div>
 
     </div>
@@ -141,16 +141,16 @@ denotes the trajectory-specific random intercept, i.e., its deviation
 from the group trajectory. Lastly,
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>e</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><annotation encoding="application/x-tex">e_{ij}</annotation></semantics></math>
 represents independent random noise with
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>e</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>∼</mo><mi>N</mi><mrow><mo stretchy="true" form="prefix">(</mo><mn>0</mn><mo>,</mo><msup><mi>σ</mi><mn>2</mn></msup><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">e_{ij} \sim N(0, \sigma^2)</annotation></semantics></math>.</p>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>e</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>∼</mo><mi>N</mi><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo>,</mo><msup><mi>σ</mi><mn>2</mn></msup><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">e_{ij} \sim N(0, \sigma^2)</annotation></semantics></math>.</p>
 <p>We can generate data according to this model using a utility function
 named <code><a href="../reference/generateLongData.html">generateLongData()</a></code> that is included in the package.
 This function generates datasets based on a mixture of linear mixed
 models. We create a wrapper around this function in order to adapt the
 function to our needs. Most importantly, we code the shape and
 coefficients of the group trajectories as fixed, setting
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>β</mi><mrow><mn>0</mn><mi>A</mi></mrow></msub><mo>,</mo><msub><mi>β</mi><mrow><mn>1</mn><mi>A</mi></mrow></msub><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">(\beta_{0A},\beta_{1A}) = (0, 0)</annotation></semantics></math>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><msub><mi>β</mi><mrow><mn>0</mn><mi>A</mi></mrow></msub><mo>,</mo><msub><mi>β</mi><mrow><mn>1</mn><mi>A</mi></mrow></msub><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(\beta_{0A},\beta_{1A}) = (0, 0)</annotation></semantics></math>
 for group A (40%) and
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>β</mi><mrow><mn>0</mn><mi>B</mi></mrow></msub><mo>,</mo><msub><mi>β</mi><mrow><mn>1</mn><mi>B</mi></mrow></msub><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo>,</mo><mo>−</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">(\beta_{0B},\beta_{1B}) = (1, -1)</annotation></semantics></math>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><msub><mi>β</mi><mrow><mn>0</mn><mi>B</mi></mrow></msub><mo>,</mo><msub><mi>β</mi><mrow><mn>1</mn><mi>B</mi></mrow></msub><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mi>−</mi><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(\beta_{0B},\beta_{1B}) = (1, -1)</annotation></semantics></math>
 for group B (60%). Other data settings (e.g., the magnitude of
 perturbation) are passed via <code>...</code>.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
@@ -353,9 +353,9 @@ containing the fitted models.</p>
 <span><span class="co">#&gt; Number of data generating functions: 8</span></span>
 <span><span class="co">#&gt; Number of analyzing procedures: 6</span></span>
 <span><span class="co">#&gt; Number of replications: 1</span></span>
-<span><span class="co">#&gt; Estimated replications per hour: 275</span></span>
-<span><span class="co">#&gt; Start of the simulation: 2026-02-13 13:49:22.268646</span></span>
-<span><span class="co">#&gt; End of the simulation: 2026-02-13 13:49:35.351602</span></span></code></pre></div>
+<span><span class="co">#&gt; Estimated replications per hour: 266</span></span>
+<span><span class="co">#&gt; Start of the simulation: 2026-09-15 07:23:22.329708</span></span>
+<span><span class="co">#&gt; End of the simulation: 2026-09-15 07:23:35.835902</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="analyzing-the-results">Analyzing the results<a class="anchor" aria-label="anchor" href="#analyzing-the-results"></a>
@@ -365,6 +365,11 @@ package to handle the filtering and aggregation of the results
 table.</p>
 <div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://r-datatable.com" class="external-link">data.table</a></span><span class="op">)</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; Attaching package: 'data.table'</span></span>
+<span><span class="co">#&gt; The following object is masked from 'package:base':</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt;     %notin%</span></span>
 <span><span class="va">resultsTable</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/data.table/man/as.data.table.html" class="external-link">as.data.table</a></span><span class="op">(</span><span class="va">result</span><span class="op">$</span><span class="va">simulation</span><span class="op">)</span></span></code></pre></div>
 <div class="section level3">
 <h3 id="recovery-of-the-number-of-clusters">Recovery of the number of clusters<a class="anchor" aria-label="anchor" href="#recovery-of-the-number-of-clusters"></a>
@@ -514,7 +519,7 @@ the MAE.<a href="#fnref2" class="footnote-back">↩︎</a></p></li>
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.0.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.1.</p>
 </div>
 
       </footer>
